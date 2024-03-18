@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  mongo:
+    container_name: mongo
+    image: mongodb/mongodb-community-server:7.0.5-ubuntu2204
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:
+    driver: local
